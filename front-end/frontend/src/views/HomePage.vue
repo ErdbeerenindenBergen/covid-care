@@ -1,9 +1,9 @@
 <template>
     <div id="Home">
-        <h1 id="welcome">
+        <!-- <h1 id="welcome">
             <div id ="name">Covid Care</div>
-            <span>Track your Covid-19 symptoms here</span>
-        </h1>
+            <span>Track your Covid-19 symptoms</span>
+        </h1> -->
         <iframe src="https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&time=2020-03-01..latest&facet=none&pickerSort=desc&pickerMetric=new_cases_per_million&Metric=Confirmed+cases&Interval=7-day+rolling+average&Relative+to+Population=true&Color+by+test+positivity=false&country=IND~USA~GBR~CAN~DEU~JPN&hideControls=true" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
         
         <!-- <h3 id="easy">To learn more about long COVID, please watch the video below.</h3> -->
@@ -56,7 +56,7 @@ name: "home-page"
 iframe {
     border-radius: 5%;
 }
-#Home h1 {
+/* #Home h1 {
 text-align:left; font-size:50px; text-transform:uppercase; color:black; letter-spacing:5px;
 font-family:"Railway", serif; font-weight:400;
 }
@@ -74,8 +74,10 @@ align-items: center;
 content: " ";
 display: block;
 height: 5px;
+background-color:rgb(206, 0, 55);
 background-color:rgb(241, 123, 155);
-}
+} */
+
 #Home h3 {
 text-align:center; font-size:30px; color:black; letter-spacing:5px;
 font-family:"Railway", serif; font-weight:200;
@@ -87,9 +89,9 @@ padding-right: 5rem;
 h4 {
     text-align: center;
 }
-#name{
+/* #name{
 text-align: center;
-}
+} */
 #text-explanation a{
     font-weight: bold;
 }
@@ -97,4 +99,5 @@ text-align: center;
 text-align:center; font-size:20px; color:black; letter-spacing:1px;
 font-family:"Railway", serif; font-style: italic;
 }
+
 </style>

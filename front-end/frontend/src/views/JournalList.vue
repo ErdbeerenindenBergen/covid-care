@@ -34,19 +34,21 @@ body{
     background-image: url('https://cdn.discordapp.com/attachments/872641665314222100/963544684028895253/wood.jpg');
 }
 .cardWrapper{
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 40px 40px;
     justify-content:center;
 }
 .journal_card{
+    font-family: Arial, Helvetica, sans-serif;
     margin-top: 25px;
     padding-top: 20px;
-    background-color: rgb(251, 250, 243);
+    background-color: rgb(226, 226, 226);
     border-radius: 5px;
     width: 20%;
     padding-bottom: 30px;
     text-align: center;
-    box-shadow: 5px 5px 5px #bc9c70;
+    box-shadow: 5px 5px 5px #a0a0a0;
 }
 </style>

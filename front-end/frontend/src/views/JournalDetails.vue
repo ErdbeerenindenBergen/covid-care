@@ -6,16 +6,13 @@
       <div class="details-container">
 
         <div class="namedesc">
-          <span id="date">{{journal.journalDate}}</span>
-          <br>
-          <br>
-          <span>Covid test result: {{journal.testedPositive}}</span>
-          <br>
-        <h3>Symptoms: </h3>
-        <p v-for="symptom in symptomList" :key="symptom">{{symptom}}</p>
-          <br>
-        <h3>Notes:</h3>
-          <p>{{journal.notes}}</p>
+            <h4 id="date">{{journal.journalDate}}</h4>
+            <h3>Covid test result: {{journal.testedPositive}}</h3>
+            <h3>Symptoms: </h3>
+            <p v-for="symptom in symptomList" :key="symptom">{{symptom}}</p>
+            <br>
+            <h3>Notes:</h3>
+            <p>{{journal.notes}}</p>
         </div>
   
         <!-- <div id="buttons">
@@ -78,40 +75,37 @@ methods: {
     width: 100%;
 }
 .details-container div {
-    padding: 40 px;
-    margin: 20px, 20px, 20px, 20px;
-    border: 5px solid rgb(255, 247, 238);
-    background-color: rgb(255, 250, 233);
+    border: 5px solid rgb(234, 234, 234);
+    background-color: rgb(234, 234, 234);
     border-radius: 10px;
     /* height: 300px;
     width: 300px; */
 }
 .namedesc {
-    color: black;
-    flex-basis: 40%;
-    flex-grow: 0;
-    flex-shrink: 0;
+    color: rgb(47, 47, 47);
+    flex-basis: 70%;
     text-align: left;
     padding: 10px;
-    min-width: 0;
-    min-height: 30vh;
     overflow: hidden;
+    font-family:'Times New Roman', Times, serif;
 }
-.namedesc span {
-    color: black;
-    font-size: 2vw;
-    font-weight: bold;
-}
-.namedesc p {
-    font-size: 120%;
-    margin-top: 20px;
-    
-}
-.namedesc span date {
+
+h4{
+    font-size: 30px;
     text-align: center;
     justify-content: center;
-    align-items: center;
 }
+
+h3{
+    padding-left: 20px;
+    font-size: 35px;
+}
+
+p {
+    font-size: 25px;
+    margin-left: 35px;
+}
+
 .instructions, .ingredient-container{
     flex-basis: 47.5%;
     flex-grow: 0;
@@ -120,6 +114,8 @@ methods: {
     overflow-y: auto;
     padding: 10px 10px 10px 10px;
 }
+
+
 
 /* This section of CSS defines the EDIT button */
 #span {
@@ -153,46 +149,24 @@ border: 5px solid black;
 box-sizing: border-box;
 border-radius: 5px;
 }
+
 #span a:before{
 color: #fff;
 background: #000;
 transform: rotateY(0deg) translateZ(25px);
 }
+
 #span a:after{
 color: #000;
 background: #fff;
-border: 5px solid cornsilk;
+border: 5px solid white;
 transform: rotateX(90deg) translateZ(25px);
 }
+
 #span a:hover{
 transform: translateZ(-25px) rotateX(-90deg);
 }
-span{
-    font-weight: bolder;
-    font-size: 150%;
-    line-height: 30px;
-}
-#date {
-    line-height: 50px;
-    text-align: center;
-    justify-content: center;
-}
-p{
-    padding-top: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 150%;
-}
-img{
-  width: 100%;
-  max-height: 200px;
-}
-h3{
-    padding-top: 30px;
-}
-p {
-    font-size: 35px;
-}
+
 #delete {
 float: right;
 background-color: rgb(146, 4, 4);
@@ -202,6 +176,7 @@ text-align: center;
 border-radius: 5px;
 margin: 20px;
 }
+
 #delete i{
 position: relative;
 color: white;

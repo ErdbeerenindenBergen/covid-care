@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 class="headline">
-            Covid Care Journal
+            <!-- Covid Care Journal -->
         </h1>
 
         <div id="feedback" class=""></div>
@@ -232,21 +232,21 @@ export default {
     
 <style scoped>
 h1 {
-    font-family: 'Railway', sans-serif;
+    margin-top: 50px;
+    font-family: 'Arial Narrow', sans-serif;
     text-align: center;
 }
 #div-form {
     padding: 40px;
-    margin: 40px, 40px, 40px, 40px;
 }
 #first-form {
-    background-color: rgb(255, 250, 244);
+    background-color: rgb(231, 231, 231);
     margin-left: 50px;
     margin-right: 50px;
     border-radius: 15px;
-    padding-left: 75px;
+    padding-left: 3%;
     padding-top: 30px;
-    margin: 40px, 40px, 40px, 40px;
+    margin: 10px, 40px, 40px, 40px;
 }
 section, p {
     padding-left: 20px;
@@ -261,7 +261,7 @@ body {
 
 body {
     font-size: 25px;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: serif;
     padding: 0;
     margin: 0;
     color: #333333;
@@ -286,7 +286,7 @@ body {
     padding: 3em;
     justify-content: center;
     grid-gap: 1em;
-    font-family: 'Oswald', sans-serif;
+    font-family: serif;
 }
 
 .headline {
@@ -297,27 +297,25 @@ body {
     font-size: 2em;
 }
 
-.subtitle-secondary {
-    font-size: 1.75em;
-}
-
 .input-group {
     margin-bottom: 2em;
-    background-color: rgb(255, 250, 244);
+    background-color: rgb(231, 231, 231);
     border-radius: 10px;
-    padding: 40px;
-    border-color: rgb(243, 219, 96);
-    color: black;
+    padding: 40px 80px 40px 0;
+    /* border-color: rgb(243, 219, 96); */
+    color: rgb(73, 73, 73);
 }
+
 #feelings {
-    color: black;
+    margin-left: 3%;
+    color: rgb(59, 59, 59);
 }
 
 .input-item {
     width: 100%;
     padding-top: 0.75em;
     font-size: 1.5em;
-    font-family: 'Oswald', sans-serif;
+    font-family: serif;
     background: transparent;
     outline: none !important;
     border: none;
@@ -344,24 +342,19 @@ body {
 .button {
     font-size: 1.5em;
     background-color: #575757;
-    font-family: 'Owsald', sans-serif;
+    font-family: serif;
     color: #FFF;
     padding: 0.5em 1.25em;
     cursor: pointer;
     text-align: left;
 }
 
-#feedback {
-    padding: 1em;
-    border-radius: 0.25em;
-    transition: all 0.5 ease-in-out;
-}
 #input-group-form {
     padding: 20px;
     padding-left: 50px;
     padding-right: 50px;
     color: black;
-    font-family: Owsald;
+    font-family: serif;
 }
 
 #date-start {
@@ -372,7 +365,7 @@ body {
 
 #start {
     display: block;
-    font: 2rem 'Raleway', serif;
+    font: 2rem serif;
     margin: .4rem 0;
     padding: 20px;
 }

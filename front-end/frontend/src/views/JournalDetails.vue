@@ -6,7 +6,7 @@
       <div class="details-container">
 
         <div class="namedesc">
-            <h4 id="date">November 17, 2022</h4>
+            <h4 id="date">{{journal.journalDate}}</h4>
             <h3>Covid test result: {{journal.testedPositive}}</h3>
             <h3>Symptoms: </h3>
             <p v-for="symptom in symptomList" :key="symptom">{{symptom}}</p>
@@ -16,8 +16,8 @@
         </div>
   
         <div id="buttons">
-          <button class="journal-button" id="edit" v-on:click.prevent="editJournal(journal)"></button>
-          <button class="journal-button" id="delete" v-on:click.prevent="deleteJournal(journal)"><font-awesome-icon class="trash-can" icon="fa-solid fa-trash-can"/> Delete </button>
+          <button class="journal-button" id="edit" v-on:click.prevent="editJournal(journal)"><font-awesome-icon class="fa-icon" id="edit-icon" icon="fa-solid fa-pencil"/> Edit </button>
+          <button class="journal-button" id="delete" v-on:click.prevent="deleteJournal(journal)"><font-awesome-icon class="fa-icon"  id="delete-icon" icon="fa-solid fa-trash-can"/> Delete </button>
         </div>
   
       </div>
@@ -107,7 +107,16 @@ p {
 
 #buttons {
     display: flex;
-    justify-content: space-around;
+    margin: auto;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+}
+
+.fa-icon {
+    padding-right:10px;
 }
 
 .journal-button {
@@ -118,87 +127,25 @@ p {
     color: white;
     padding: 15px;
     border-radius: 10px;
+    width: 150px;
+}
+
+#edit {
+    background-color: rgb(42, 163, 105);
+    margin-right: 10px;
+}
+
+#edit:hover {
+    background-color: rgb(102, 197, 151);
+    margin-right: 10px;
 }
 
 #delete {
     background-color: rgb(207, 0, 0);
+    margin-left: 10px;
 }
 
-
-/* .instructions, .ingredient-container{
-    flex-basis: 47.5%;
-    flex-grow: 0;
-    flex-shrink: 0;
-    min-height: 55vh;
-    overflow-y: auto;
-    padding: 10px 10px 10px 10px;
-} */
-
-/* This section of CSS defines the EDIT button */
-/* #span {
-position: relative;
-display: inline-flex;
-width: 180px;
-height: 55px;
-margin: 20px;
-perspective: 1000px;
-float: right;
+#delete:hover {
+    background-color: rgb(239, 99, 99);
 }
-#span a{
-font-size: 19px;
-letter-spacing: 1px;
-transform-style: preserve-3d;
-transform: translateZ(-25px);
-transition: transform .25s;
-font-family: 'Montserrat', sans-serif;
-
-}
-#span a:before,
-#span a:after{
-position: absolute;
-content: "EDIT";
-height: 55px;
-width: 180px;
-display: flex;
-align-items: center;
-justify-content: center;
-border: 5px solid black;
-box-sizing: border-box;
-border-radius: 5px;
-}
-
-#span a:before{
-color: #fff;
-background: #000;
-transform: rotateY(0deg) translateZ(25px);
-}
-
-#span a:after{
-color: #000;
-background: #fff;
-border: 5px solid white;
-transform: rotateX(90deg) translateZ(25px);
-}
-
-#span a:hover{
-transform: translateZ(-25px) rotateX(-90deg);
-} */
-
-/* #delete {
-float: right;
-background-color: rgb(146, 4, 4);
-width: 50px;
-height: 50px;
-text-align: center;
-border-radius: 5px;
-margin: 20px;
-} */
-
-/* #delete i{
-position: relative;
-color: white;
-font-size: 30px;
-margin: 0;
-top:20%;
-} */
 </style>

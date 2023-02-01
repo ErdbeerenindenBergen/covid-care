@@ -30,9 +30,6 @@ export default  {
 </script>
 
 <style scoped>
-body{
-    background-image: url('https://cdn.discordapp.com/attachments/872641665314222100/963544684028895253/wood.jpg');
-}
 .cardWrapper{
     margin-top: 20px;
     display: flex;

@@ -4,9 +4,10 @@ import router from './router/index';
 import axios from 'axios';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
+import { faTrashCan, faPencil } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faTrashCan);
+library.add(faPencil);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 

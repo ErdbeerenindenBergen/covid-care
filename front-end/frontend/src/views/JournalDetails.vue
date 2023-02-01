@@ -6,7 +6,7 @@
       <div class="details-container">
 
         <div class="namedesc">
-            <h4 id="date">{{journal.journalDate}}</h4>
+            <h4 id="date">November 17, 2022</h4>
             <h3>Covid test result: {{journal.testedPositive}}</h3>
             <h3>Symptoms: </h3>
             <p v-for="symptom in symptomList" :key="symptom">{{symptom}}</p>
@@ -15,10 +15,10 @@
             <p>{{journal.notes}}</p>
         </div>
   
-        <!-- <div id="buttons">
-          <span id="span" v-on:click.prevent="editJournal(journal)"> <a href=""></a> </span>
-          <span id="delete" v-on:click.prevent="deleteJournal(journal)"><i class="fa fa-trash-o"></i></span>
-        </div> -->
+        <div id="buttons">
+          <button id="edit" v-on:click.prevent="editJournal(journal)"></button>
+          <button id="delete" v-on:click.prevent="deleteJournal(journal)" font-awesome-icon icon=faTrashCan ></button>
+        </div>
   
       </div>
     </div>
@@ -26,6 +26,7 @@
 
 <script>
 import RequestService from '../services/RequestService.js'
+import {faTrashCan} from "@fortawesome/free-solid-svg-icons";
 export default {
     name: "journal-details",
     data () {
@@ -69,19 +70,18 @@ methods: {
 .details-container{
     display: flex;
     gap: 10px 10px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
     height: 100%;
-    width: 100%;
+    margin: auto;
+    width: 60%;
+    flex-direction: column;
 }
-.details-container div {
+
+.namedesc {
     border: 5px solid rgb(234, 234, 234);
     background-color: rgb(234, 234, 234);
     border-radius: 10px;
-    /* height: 300px;
-    width: 300px; */
-}
-.namedesc {
     color: rgb(47, 47, 47);
     flex-basis: 70%;
     text-align: left;
@@ -106,19 +106,17 @@ p {
     margin-left: 35px;
 }
 
-.instructions, .ingredient-container{
+/* .instructions, .ingredient-container{
     flex-basis: 47.5%;
     flex-grow: 0;
     flex-shrink: 0;
     min-height: 55vh;
     overflow-y: auto;
     padding: 10px 10px 10px 10px;
-}
-
-
+} */
 
 /* This section of CSS defines the EDIT button */
-#span {
+/* #span {
 position: relative;
 display: inline-flex;
 width: 180px;
@@ -165,9 +163,9 @@ transform: rotateX(90deg) translateZ(25px);
 
 #span a:hover{
 transform: translateZ(-25px) rotateX(-90deg);
-}
+} */
 
-#delete {
+/* #delete {
 float: right;
 background-color: rgb(146, 4, 4);
 width: 50px;
@@ -175,13 +173,13 @@ height: 50px;
 text-align: center;
 border-radius: 5px;
 margin: 20px;
-}
+} */
 
-#delete i{
+/* #delete i{
 position: relative;
 color: white;
 font-size: 30px;
 margin: 0;
 top:20%;
-}
+} */
 </style>

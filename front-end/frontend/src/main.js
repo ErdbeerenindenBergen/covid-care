@@ -1,7 +1,17 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router/index'
-import axios from 'axios'
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router/index';
+import axios from 'axios';
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faCalendarDays, faChampagneGlasses, faMapLocationDot, faPhone, faTrophy } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faTrashCan);
+
+Vue.component('icon', FontAwesomeIcon);
+Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.config.productionTip = false
 

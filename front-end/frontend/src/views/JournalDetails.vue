@@ -16,8 +16,8 @@
         </div>
   
         <div id="buttons">
-          <button id="edit" v-on:click.prevent="editJournal(journal)"></button>
-          <button id="delete" v-on:click.prevent="deleteJournal(journal)" font-awesome-icon icon=faTrashCan ></button>
+          <button class="journal-button" id="edit" v-on:click.prevent="editJournal(journal)"></button>
+          <button class="journal-button" id="delete" v-on:click.prevent="deleteJournal(journal)"><font-awesome-icon class="trash-can" icon="fa-solid fa-trash-can"/> Delete </button>
         </div>
   
       </div>
@@ -26,7 +26,6 @@
 
 <script>
 import RequestService from '../services/RequestService.js'
-import {faTrashCan} from "@fortawesome/free-solid-svg-icons";
 export default {
     name: "journal-details",
     data () {
@@ -105,6 +104,26 @@ p {
     font-size: 25px;
     margin-left: 35px;
 }
+
+#buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.journal-button {
+    font-family: 'Times New Roman', Times, serif;
+    font-size:30px;
+    border: none;
+    box-shadow: none;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#delete {
+    background-color: rgb(207, 0, 0);
+}
+
 
 /* .instructions, .ingredient-container{
     flex-basis: 47.5%;

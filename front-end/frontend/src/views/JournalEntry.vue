@@ -139,7 +139,7 @@
         <form id="input-group-form">
             <div class="input-group">
                 <textarea name="feelings" id="feelings" rows="7" class="input-item"
-                    placeholder="Enter your feelings here"></textarea>
+                    placeholder="Enter your notes here"></textarea>
             </div>
 
             <!-- <div class="text-right">
@@ -150,9 +150,16 @@
         <label for = "start" id="date-start"> 
             <h2>Enter Date: </h2>
         </label>
+
         <div id="date-button">
-        <input type ="date" id="start" name="date" value="2020-01-01">
+            <input type ="date" id="start" name="date" value="2020-01-01">
+            <input class="button save" type="submit" id="save" value="Save Entry">
         </div>
+
+        <!-- <div class="text-right">
+            <input class="button" type="submit" id="save" value="Save">
+        </div> -->
+
     </div>
 </template>
     
@@ -236,9 +243,11 @@ h1 {
     font-family: 'Arial Narrow', sans-serif;
     text-align: center;
 }
+
 #div-form {
     padding: 40px;
 }
+
 #first-form {
     background-color: rgb(231, 231, 231);
     margin-left: 50px;
@@ -248,10 +257,12 @@ h1 {
     padding-top: 30px;
     margin: 10px, 40px, 40px, 40px;
 }
+
 section, p {
     padding-left: 20px;
     line-height: 25px;
 }
+
 html,
 body {
     height: 100%;
@@ -298,7 +309,6 @@ body {
 }
 
 .input-group {
-    margin-bottom: 2em;
     background-color: rgb(231, 231, 231);
     border-radius: 10px;
     padding: 40px 80px 40px 0;
@@ -311,6 +321,11 @@ body {
     color: rgb(59, 59, 59);
 }
 
+#feelings::placeholder {
+    color: rgb(90, 89, 89);
+    padding: 20px;
+}
+
 .input-item {
     width: 100%;
     padding-top: 0.75em;
@@ -320,7 +335,6 @@ body {
     outline: none !important;
     border: none;
     border-radius: 0 !important;
-    -webkit-appearance: none;
     border-bottom: 1px solid #979797;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -350,7 +364,7 @@ body {
 }
 
 #input-group-form {
-    padding: 20px;
+    padding-top: 20px;
     padding-left: 50px;
     padding-right: 50px;
     color: black;
@@ -375,8 +389,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding-bottom: 40px;
     margin-bottom: 40px;
+}
+
+input {
+    border-radius: 10px;
 }
 
 .error {
@@ -395,6 +414,28 @@ body {
 ::placeholder {
     color: black;
 }
+
+::-webkit-datetime-edit { 
+    padding: 0.1em; 
+}
+
+::-webkit-datetime-edit-fields-wrapper { 
+    background: none; 
+}
+::-webkit-datetime-edit-text { 
+    padding: 0 0.3em; 
+    border-radius: 10px;
+}
+
+::-webkit-inner-spin-button { 
+    display: none; 
+}
+
+.save {
+    background-color: rgb(220, 2, 60);
+    border: none;
+}
+
 
 /* label {
         font-weight: bold;
